@@ -112,7 +112,3 @@ class Searcher:
                 pass
 
         return self.result
-
-# print(Searcher().search('Remember our'))
-
-print(Searcher().WebSearcher('抖音'))
