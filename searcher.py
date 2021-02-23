@@ -14,7 +14,7 @@ class Searcher:
         self.sub_results = []
         self.num = 10
 
-    def search(self, string):
+    def LocalSearcher(self, string):
         for self.dirpath, self.dirnames, self.files in os.walk(Path.home()):
             self.listdirs = os.listdir(self.dirpath)
             for i in self.listdirs:
@@ -30,21 +30,14 @@ class Searcher:
         return self.success
 
     def WebSearcher(self, string):
-        while self.num < 50:
-            # search baidu (might get banned)
-            temp = search(string)
-            print(temp)
-            for i in range(self.num):
-                print(i)
-                self.sub_results.append(temp[i]['url'])
+        # search baidu (might get banned)
+        temp = search(string)
+        for i in range(self.num):
+            self.sub_results.append(temp[i]['url'])
 
-            print(self.sub_results)
-
-            # search google (might get banned)
-            self.sub_results.append(googlesearch.search(string, num_results=self.num))
-            
-            sleep(.700)
-            self.num += 10
+        # search google (might get banned)
+        googletemp = googlesearch.search(string, num_results=self.num)
+        self.sub_results.append(googletemp)
 
         for i in self.sub_results:
             try:
