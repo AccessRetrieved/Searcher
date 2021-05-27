@@ -2,7 +2,7 @@
 Powerful search tool.
 
 ## Search method
-- Local(disk, filename, filepath, and inside readable file)
+- Local(disks, filenames, filepaths, and inside readable files)
 - Web(Baidu and Google)
 
 
