@@ -6,7 +6,7 @@ Powerful search tool.
 - Web(Baidu and Google)
 
 
-## Integrate into your project
+## Integrate it into your project
 1. Download searcher.py and drag into your working directory.
 2. impor searcher
 
